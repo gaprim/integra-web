@@ -1,0 +1,515 @@
+/* ==== TOKENS (INTEGRA) ==== */
+:root{
+  /* paleta institucional */
+  --ink:#0D5F6A;          /* Azul petróleo: texto/títulos/énfasis */
+  --paper:#F9F9F9;        /* Fondo base claro */
+  --brand:#4BB7D8;        /* Celeste brillante: acentos/CTA */
+  --brand-ink:#2F9FC3;    /* Celeste profundo: hover/activos */
+  --eco:#6FCF97;          /* Verde menta: sostenibilidad/detalle */
+  --muted:#4B5E64;        /* Gris azulado sobrio para texto secundario */
+  --line:#D9E0E8;         /* Borde/perla técnico */
+
+  /* tipografía */
+  --ff-title:"Poppins","DM Sans",sans-serif;
+  --ff-body:"DM Sans",system-ui,-apple-system,Arial,sans-serif;
+
+  /* escala tipográfica (fluid) */
+  --h1:clamp(2.2rem,4vw,3.5rem);
+  --h2:clamp(1.6rem,2.8vw,2.2rem);
+  --h3:clamp(1.25rem,2vw,1.5rem);
+  --lead:clamp(1.05rem,1.3vw,1.15rem);
+
+  /* espaciado (4pt scale) */
+  --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-5:1.5rem;
+  --s-6:2rem; --s-7:2.5rem; --s-8:3rem; --s-9:4rem; --s-10:5rem;
+
+  /* elevación y radios */
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --elev-1: 0 10px 30px rgba(0,0,0,.06);
+  --elev-2: 0 20px 50px rgba(0,0,0,.10);
+  --border: 1px solid rgba(13,95,106,.10); /* borde con tinta azul petróleo */
+
+  /* gradientes institucionales */
+  --gradient-brand: linear-gradient(90deg, var(--brand) 0%, var(--eco) 100%);
+  --gradient-solid: linear-gradient(90deg, var(--ink) 0%, var(--brand) 100%);
+}
+
+/* ==== BASE ==== */
+html,body{background:var(--paper);color:var(--ink);scroll-behavior:smooth;}
+body{font-family:var(--ff-body);line-height:1.6;}
+h1,h2,h3,h4{font-family:var(--ff-title);letter-spacing:-.01em;margin:0 0 var(--s-4);}
+h1{font-size:var(--h1);font-weight:700;}
+h2{font-size:var(--h2);font-weight:700;}
+h3{font-size:var(--h3);font-weight:600;}
+.lead{color:var(--muted);font-size:var(--lead);}
+
+/* secciones */
+.section{padding:var(--s-9) 0;}
+.section--alt{background:#fff;}
+.section--muted{background:#F3F6F8;} /* tono claro ligeramente más cálido que el gris puro */
+section{scroll-margin-top:80px;} /* por navbar sticky */
+
+/* contenedores auxiliares */
+.max-720{max-width:720px;margin-inline:auto;}
+.max-960{max-width:960px;margin-inline:auto;}
+.stack > * + *{margin-top:var(--s-4);} /* espaciado uniforme vertical */
+
+/* componentes base */
+.btn-primary{
+  background:var(--gradient-brand);
+  border:none;
+  color:#fff;
+  font-weight:600;
+}
+.btn-primary:hover{
+  background:var(--gradient-solid);
+  border:none;
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:.75rem;
+  background:#fff;
+  box-shadow:var(--elev-1);
+  transition:.2s ease;
+}
+.card:hover{transform:translateY(-2px);}
+
+/* Badge institucional */
+.badge-pill{
+  display:inline-block;
+  padding:.5rem .75rem;
+  border-radius:999px;
+  background:rgba(75,183,216,.15); /* brand 0.15 */
+  color:var(--ink);
+  font-weight:600;
+  font-size:.9rem;
+  border:1px solid rgba(75,183,216,.25);
+}
+
+/* títulos más “calmados” en mobile */
+@media (max-width: 576px){
+  .display-5{font-size:calc(var(--h1) - .4rem);}
+}
+
+/* navbar activo */
+.nav-link.active{color:var(--brand-ink)!important;}
+
+/* --- Logos de clientes --- */
+.client-logo {
+  max-height: 60px;
+  opacity: .8;
+  transition: opacity .25s ease, transform .25s ease, filter .25s ease;
+  filter: grayscale(100%);
+}
+.client-logo:hover {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-2px);
+}
+
+/* ===== Executive Look ===== */
+
+/* Containers y cards “pro” */
+.card-pro{
+  background:#fff;
+  border:var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elev-1);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card-pro:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--elev-2);
+  border-color: rgba(13,95,106,.18); /* acento de borde con tinta */
+}
+
+/* Icon circle (usa marca + eco) */
+.icon-wrap{
+  width:56px;height:56px;border-radius:999px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg, rgba(75,183,216,.14), rgba(111,207,151,.07));
+  border:1px solid rgba(75,183,216,.28);
+  backdrop-filter:saturate(120%) blur(2px);
+}
+
+/* Titulares sección */
+h2.section-title{
+  font-weight:700;
+  letter-spacing:-0.01em;
+  margin-bottom:.25rem;
+}
+p.section-sub{
+  color: var(--muted);
+  margin-bottom: var(--s-7);
+}
+
+/* Bandas full-bleed con textura institucional */
+.section-full{
+  padding: var(--s-9) 0;
+  position: relative;
+}
+.section-full .container{ position: relative; z-index: 2; }
+.section-full::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 400px at 80% 10%, rgba(75,183,216,.10), transparent 60%),
+    radial-gradient(900px 300px at 10% 0%, rgba(111,207,151,.08), transparent 55%),
+    linear-gradient(to bottom, #fff 0%, #fff 60%, #F6F8FA 100%);
+  z-index:1;
+}
+
+/* Tarjetas horizontales (Sectores) */
+.card-horizontal{
+  display:flex; gap:1.25rem; align-items:center;
+  padding:1.25rem; border-radius: var(--radius-lg);
+  background:#fff; border:var(--border); box-shadow: var(--elev-1);
+}
+.card-horizontal img{
+  width:320px; height:200px; object-fit:cover; border-radius:12px;
+  filter: grayscale(100%) contrast(1.05) saturate(0.9);
+  transition: filter .3s ease;
+}
+.card-horizontal:hover img{ filter:none; }
+
+/* Clientes (más sobrio) — si usás #clientes */
+#clientes .client-logo{ max-height:52px; opacity:.85; filter:grayscale(100%); transition:all .25s ease; }
+#clientes .client-logo:hover{ opacity:1; filter:none; transform:translateY(-2px); }
+
+/* Reveal on scroll (sutil) */
+.reveal{ opacity:0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-visible{ opacity:1; transform:none; }
+
+/* === Navbar INTEGRA === */
+.navbar {
+  font-family: var(--ff-body);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1030;
+}
+
+.navbar-brand img.logo-integra {
+  max-height: 44px;
+  height: auto;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand img.logo-integra:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img.logo-integra {
+    max-height: 38px;
+  }
+}
+
+/* Links */
+.nav-link {
+  color: var(--ink);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand);
+}
+
+/* Botón CTA */
+.navbar .btn-primary {
+  background: var(--gradient-brand);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.navbar .btn-primary:hover {
+  background: var(--gradient-solid);
+  transform: translateY(-2px);
+}
+/* ===== Navbar refinado ===== */
+.navbar-elevated {
+  background: linear-gradient(180deg, #ffffff 0%, #F6F8FA 100%);
+  box-shadow: 0 4px 14px rgba(13,95,106,.08);
+}
+.navbar-elevated .nav-link{
+  color: var(--ink); font-weight:500; transition: color .2s ease;
+}
+.navbar-elevated .nav-link:hover,
+.navbar-elevated .nav-link.active{ color: var(--brand); }
+
+.logo-integra{
+  max-height:56px; height:auto; width:auto;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
+  transition: transform .2s ease;
+}
+.logo-integra:hover{ transform: scale(1.03); }
+@media (max-width: 768px){ .logo-integra{ max-height:44px; } }
+
+/* Variante opcional con barra teñida muy suave (aplicar clase navbar-toned al <nav>) */
+.navbar-toned{ background: linear-gradient(180deg, rgba(13,95,106,.06), rgba(13,95,106,0)); }
+
+/* ===== Hero refinado ===== */
+/* HERO: asegurar altura y que el fondo se vea completo */
+.hero-refined{
+  position: relative;
+  /* subí la altura mínima y quitá el recorte */
+  min-height: clamp(560px, 62vh, 720px);
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 7vw, 6rem);
+  background: linear-gradient(180deg, #E8F7FB 0%, #F9F9F9 100%);
+  overflow: visible; /* <— antes estaba hidden */
+}
+
+.hero-refined .hero-bg{
+  position: absolute;
+  left: 0; right: 0; bottom: 0; top: auto;
+  width: 100%;
+  height: 120%;               /* un poco más alta para que “sobrepinte” */
+  object-fit: cover;
+  object-position: center bottom;  /* ancla las ondas abajo */
+  z-index: 0;
+  opacity: .8;
+  pointer-events: none;
+}
+
+.hero-refined .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA con identidad INTEGRA */
+.btn-primary{
+  background: var(--gradient-brand);
+  border:none; color:#fff; font-weight:700;
+  box-shadow: 0 10px 24px rgba(75,183,216,.25);
+}
+.btn-primary:hover{ background: var(--gradient-solid); }
+
+.btn-outline-secondary{
+  border-color: var(--line); color: var(--ink); background:#fff;
+}
+.btn-outline-secondary:hover{
+  border-color: var(--ink); color:#fff; background: var(--ink);
+}
+
+/* Badge alineado a paleta */
+.badge-pill{
+  background: rgba(75,183,216,.15);
+  border: 1px solid rgba(75,183,216,.25);
+  color: var(--ink);
+}
+
+/* HERO: menos aire abajo + gradiente que se funde con la siguiente sección */
+.hero-refined{
+  position: relative;
+  min-height: clamp(560px, 62vh, 720px);
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(2.5rem, 4vw, 3rem); /* ↓ padding-bottom */
+  background: linear-gradient(180deg, #E8F7FB 0%, #F9FCFC 70%, #F5F7F8 100%); /* transición suave */
+  overflow: visible; /* importante para que se vean las ondas */
+}
+.hero-refined .hero-bg{
+  position: absolute; inset: auto 0 0 0; /* anclado abajo */
+  width: 100%; height: 120%;
+  object-fit: cover; object-position: center bottom;
+  opacity: .7; filter: blur(.6px); pointer-events:none; z-index:0;
+}
+.hero-refined .container{ position: relative; z-index: 1; }
+
+/* SECCIÓN SIGUIENTE: subirla un poco y sin fondo para que se funda con el hero */
+.after-hero{
+  margin-top: -3rem;              /* “empuja” hacia arriba */
+  background: transparent !important; /* sin franja gris */
+  position: relative; z-index: 2; /* por si hay sombras/ondas */
+  scroll-margin-top: 90px;        /* respeta el sticky navbar en anclas */
+}
+
+/* Ajuste fino en móviles: menos solapamiento */
+@media (max-width: 576px){
+  .after-hero{ margin-top: -2rem; }
+}
+
+/* HERO: gradiente más largo y cálido hacia el final */
+.hero-refined {
+  position: relative;
+  min-height: clamp(560px, 62vh, 720px);
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 4rem);
+  background: linear-gradient(
+    180deg,
+    #E8F7FB 0%,       /* azul claro */
+    #F4FAFA 70%,      /* transición neutra */
+    #F3F2EE 100%      /* leve tono arena que conecta visualmente */
+  );
+  overflow: visible;
+}
+
+/* Ondas del fondo */
+.hero-refined .hero-bg {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  width: 100%; height: 130%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.7;
+  filter: blur(0.6px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-refined .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* SECCIÓN POST-HERO: fusión visual */
+.after-hero {
+  margin-top: -2rem; /* leve superposición */
+  background: #F3F2EE; /* mismo color final del hero */
+  position: relative;
+  z-index: 2;
+  scroll-margin-top: 90px;
+}
+
+/* Capa de sombra difusa arriba */
+.after-hero::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0; right: 0; height: 40px;
+  background: linear-gradient(to bottom, rgba(13,95,106,0.06), rgba(243,242,238,0));
+  pointer-events: none;
+}
+
+/* 1) HERO: fade-out real al final (sin corte) */
+.hero-refined{
+  position:relative;
+  min-height: clamp(560px,62vh,720px);
+  padding: clamp(5rem,10vw,8rem) 0 clamp(2.5rem,4vw,3rem);
+  background: linear-gradient(180deg,#E8F7FB 0%, #F4FAFA 68%, #F3F2EE 100%);
+  overflow: visible;
+}
+
+/* Fondo animado + máscara que desvanece hacia abajo */
+.hero-refined .hero-bg{
+  position:absolute; inset:auto 0 0 0;
+  width:100%; height:130%;
+  object-fit:cover; object-position:center bottom;
+  opacity:.7; filter:blur(.6px);
+  z-index:0; pointer-events:none;
+
+  /* FADING: oculta la “base plana” del SVG al 100% */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 74%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 74%, rgba(0,0,0,0) 100%);
+}
+
+/* Capa extra que funde hero→sección inferior (por si el navegador no soporta mask) */
+.hero-refined::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:80px;
+  background: linear-gradient(to bottom, rgba(243,242,238,0) 0%, #F3F2EE 100%);
+  z-index:1; pointer-events:none;
+}
+
+.hero-refined .container{ position:relative; z-index:2; }
+
+/* 2) SECCIÓN POST-HERO: superponer y eliminar “línea de corte” */
+.after-hero{
+  margin-top:-2.25rem;              /* se mete bajo el fade del hero */
+  background:#F3F2EE !important;    /* mismo color donde termina el hero */
+  position:relative; z-index:2;
+  border-top:none !important; box-shadow:none !important;
+}
+.after-hero::before{ display:none; } /* por si quedó algún ::before anterior */
+
+@media (max-width:576px){
+  .after-hero{ margin-top:-1.5rem; }
+}
+
+/* SECCIÓN POST-HERO: versión neutra fría con sombra suave */
+.after-hero {
+  margin-top: -2rem;
+  background: #F6FAFB !important; /* gris azulado claro */
+  position: relative;
+  z-index: 2;
+  scroll-margin-top: 90px;
+}
+
+/* Sombra superior ultra sutil (da profundidad sin línea dura) */
+.after-hero::before {
+  content: "";
+  position: absolute;
+  top: -25px; left: 0; right: 0; height: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 95, 106, 0.05) 0%,
+    rgba(13, 95, 106, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ajuste en móviles: menos solapamiento */
+@media (max-width: 576px){
+  .after-hero{ margin-top: -1.5rem; }
+}
+
+/* === HERO con transición perfecta hacia #F6FAFB === */
+.hero-refined{
+  position: relative;
+  min-height: clamp(560px, 62vh, 720px);
+  padding: clamp(5rem,10vw,8rem) 0 clamp(2.5rem,4vw,3rem);
+  overflow: visible;
+
+  /* Capa 1: base fría del hero (vertical) */
+  background:
+    linear-gradient(
+      180deg,
+      #E8F7FB 0%,        /* cielo frío */
+      #DFF3F8 45%,       /* celeste más denso en la mitad */
+      #F6FAFB 100%       /* TERMINA EXACTO en el color de beneficios */
+    );
+
+  /* Capa 2: velo institucional brand→eco en diagonal, muy sutil */
+  background-image:
+    linear-gradient(180deg, #E8F7FB 0%, #DFF3F8 45%, #F6FAFB 100%),
+    linear-gradient(120deg, rgba(75,183,216,.20), rgba(111,207,151,.10));
+  background-blend-mode: normal, soft-light;
+}
+
+/* Ondas SVG del fondo + desvanecido real al borde inferior */
+.hero-refined .hero-bg{
+  position:absolute; inset:auto 0 0 0;
+  width:100%; height:130%;
+  object-fit:cover; object-position:center bottom;
+  opacity:.65; filter: blur(.6px); pointer-events:none; z-index:0;
+
+  /* Fading que evita “base plana” visible */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 100%);
+}
+
+/* Halo suave que sigue al degradado (por si algún navegador no respeta mask) */
+.hero-refined::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:72px;
+  background: linear-gradient(to bottom, rgba(246,250,251,0) 0%, #F6FAFB 100%);
+  z-index:1; pointer-events:none;
+}
+
+/* Contenido del hero por encima de todo */
+.hero-refined .container{ position:relative; z-index:2; }
+
+/* === Beneficios (post-hero) — mismo color, sin cortes ni sombras duras === */
+.after-hero{
+  margin-top:-2rem;
+  background:#F6FAFB !important;
+  position:relative; z-index:2;
+  border-top:none !important; box-shadow:none !important;
+}
+.after-hero::before{ display:none; }  /* evitar cualquier línea residual */
+
+@media (max-width:576px){
+  .after-hero{ margin-top:-1.25rem; }
+}

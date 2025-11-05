@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="none"/>
+  <polygon points="30,9 49,21 49,39 30,51 11,39 11,21" fill="#9CA3AF"/>
+  <text x="70" y="38" font-family="Poppins, Arial, sans-serif" font-size="26" fill="#4B5563" font-weight="700">SecureTech</text>
+</svg>
