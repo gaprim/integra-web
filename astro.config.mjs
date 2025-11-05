@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
-export default {
-  site: 'https://gaprim.github.io/',
-  base: '/integra-web/',
-};
+
+export default defineConfig({
+  // opcional: podés omitir 'site' en Vercel
+  // site: 'https://tu-proyecto.vercel.app',
+});
