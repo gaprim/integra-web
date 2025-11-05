@@ -1,2 +1,5 @@
 import { defineConfig } from "astro/config";
-export default defineConfig({ site: "https://www.integra.com.ar" });
+export default {
+  site: 'https://gaprim.github.io/',
+  base: '/integra-web/',
+};

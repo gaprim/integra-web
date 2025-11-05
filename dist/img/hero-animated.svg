@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="none">
+  <defs>
+    <!-- Gradiente institucional brand→eco, sutil -->
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4BB7D8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#6FCF97" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base lavada del hero -->
+  <rect width="1600" height="600" fill="url(#g)"/>
+
+  <!-- Ondas principales (ligeramente más presentes) -->
+  <g fill="#4BB7D8" opacity="0.16" filter="url(#soft)">
+    <path>
+      <animate attributeName="d" dur="8s" repeatCount="indefinite"
+        values="
+          M0,420 C320,360 640,520 960,460 C1240,400 1420,520 1600,440 L1600,600 L0,600 Z;
+          M0,440 C320,380 640,500 960,480 C1240,460 1420,500 1600,460 L1600,600 L0,600 Z;
+          M0,420 C320,360 640,520 960,460 C1240,400 1420,520 1600,440 L1600,600 L0,600 Z
+        "/>
+    </path>
+
+    <path opacity="0.85">
+      <animate attributeName="d" dur="10s" repeatCount="indefinite"
+        values="
+          M0,460 C300,420 620,560 940,500 C1240,440 1460,540 1600,500 L1600,600 L0,600 Z;
+          M0,480 C300,440 620,540 940,520 C1240,500 1460,520 1600,520 L1600,600 L0,600 Z;
+          M0,460 C300,420 620,560 940,500 C1240,440 1460,540 1600,500 L1600,600 L0,600 Z
+        "/>
+    </path>
+  </g>
+
+  <!-- Líneas “dibujadas” (más legibles, un toque más ágiles) -->
+  <g fill="none" stroke="#4BB7D8" stroke-opacity="0.35" stroke-width="2.5" stroke-linecap="round">
+    <path d="M0,520 C260,480 520,560 780,520 C1040,480 1300,560 1600,520">
+      <animate attributeName="stroke-dasharray" values="0,2000; 160,40; 0,2000" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0,560 C260,520 520,600 780,560 C1040,520 1300,600 1600,560" stroke-opacity="0.28">
+      <animate attributeName="stroke-dasharray" values="0,2000; 140,40; 0,2000" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Burbujas sutiles reactivadas (paleta INTEGRA) -->
+  <g id="bubbles" opacity="0.65">
+    <circle cx="220" cy="140" r="12" fill="#4BB7D8">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -14; 0 0" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35; 0.75; 0.35" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1340" cy="120" r="16" fill="#6FCF97" opacity="0.55">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -18; 0 0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.30; 0.70; 0.30" dur="8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="980" cy="90" r="10" fill="#4BB7D8" opacity="0.60">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -12; 0 0" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.30; 0.65; 0.30" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- extras sutiles -->
+    <circle cx="380" cy="110" r="9" fill="#6FCF97" opacity="0.55">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="7.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.30; 0.60; 0.30" dur="7.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1180" cy="160" r="11" fill="#4BB7D8" opacity="0.55">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -12; 0 0" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35; 0.70; 0.35" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
