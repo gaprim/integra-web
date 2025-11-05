@@ -1,6 +1,2 @@
 import { defineConfig } from "astro/config";
-
-export default defineConfig({
-  // opcional: podés omitir 'site' en Vercel
-  // site: 'https://tu-proyecto.vercel.app',
-});
+export default defineConfig({ site: "https://www.integra.com.ar" });
