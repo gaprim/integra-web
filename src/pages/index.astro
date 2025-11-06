@@ -3,343 +3,573 @@ import Layout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CTAButton from "../components/CTAButton.astro";
-const pageTitle = "INTEGRA | Seguridad e Higiene + Medio Ambiente para PyMEs del AMBA";
-const pageDesc  = "Planes simples, cumplibles y medibles. Asesor externo, capacitaciones y gestión ambiental.";
+const pageTitle =
+  "INTEGRA | Seguridad e Higiene + Medio Ambiente para PyMEs del AMBA";
+const pageDesc =
+  "Planes simples, cumplibles y medibles. Asesor externo, capacitaciones y gestión ambiental.";
 ---
+
 <Layout title={pageTitle} description={pageDesc}>
   <Navbar />
 
   <!-- INICIO -->
- <section id="inicio" class="hero-refined">
-  <!-- Si ya tenés /img/hero-animated.svg, déjalo visible como fondo -->
-  <img src="img/hero-animated.svg" alt="" aria-hidden="true" class="hero-bg" />
+  <section id="inicio" class="hero-refined">
+    <!-- Si ya tenés /img/hero-animated.svg, déjalo visible como fondo -->
+    <img
+      src="img/hero-animated.svg"
+      alt=""
+      aria-hidden="true"
+      class="hero-bg"
+    />
 
-  <div class="container max-960 text-center">
-    <span class="badge-pill">Consultora en Seguridad, Higiene y Medio Ambiente</span>
-    <h1 class="display-5 mt-3">Seguridad y ambiente que hacen crecer tu empresa.</h1>
-    <p class="lead mt-2">Planes simples, cumplibles y medibles para PyMEs e instituciones del AMBA.</p>
+    <div class="container max-960 text-center">
+      <span class="badge-pill"
+        >Consultora en Seguridad, Higiene y Medio Ambiente</span
+      >
+      <h1 class="display-5 mt-3">
+        Seguridad y ambiente que hacen crecer tu empresa.
+      </h1>
+      <p class="lead mt-2">
+        Planes simples, cumplibles y medibles para PyMEs e instituciones del
+        AMBA.
+      </p>
 
-    <div class="d-flex gap-2 justify-content-center mt-3">
-      <a class="btn btn-primary btn-lg" href="/#contacto">Solicitar diagnóstico</a>
-      <a class="btn btn-outline-secondary btn-lg" href="/#servicios">Conocer servicios</a>
+      <div class="d-flex gap-2 justify-content-center mt-3">
+        <a class="btn btn-primary btn-lg" href="/#contacto"
+          >Solicitar diagnóstico</a
+        >
+        <a class="btn btn-outline-secondary btn-lg" href="/#servicios"
+          >Conocer servicios</a
+        >
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- BENEFICIOS -->
   <section id="beneficios" class="section after-hero">
-  <div class="container">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3">
-        <h3 class="h5">Cumplimiento sin complicaciones</h3>
-        <p class="text-muted m-0">Matriz legal, plan anual y soporte ante inspecciones.</p>
-      </div>
-      <div class="col-6 col-lg-3">
-        <h3 class="h5">Capacitación útil</h3>
-        <p class="text-muted m-0">Formaciones breves, presenciales y virtuales.</p>
-      </div>
-      <div class="col-6 col-lg-3">
-        <h3 class="h5">Lenguaje claro</h3>
-        <p class="text-muted m-0">Asesoría técnica que habla tu idioma.</p>
-      </div>
-      <div class="col-6 col-lg-3">
-        <h3 class="h5">Resultados medibles</h3>
-        <p class="text-muted m-0">Indicadores y reportes para decidir mejor.</p>
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <h3 class="h5">Cumplimiento sin complicaciones</h3>
+          <p class="text-muted m-0">
+            Matriz legal, plan anual y soporte ante inspecciones.
+          </p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="h5">Capacitación útil</h3>
+          <p class="text-muted m-0">
+            Formaciones breves, presenciales y virtuales.
+          </p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="h5">Lenguaje claro</h3>
+          <p class="text-muted m-0">Asesoría técnica que habla tu idioma.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h3 class="h5">Resultados medibles</h3>
+          <p class="text-muted m-0">
+            Indicadores y reportes para decidir mejor.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="section section--alt">
- <div class="container max-960">
-  <h2 class="section-title text-center">Soluciones ejecutivas</h2>
-  <p class="section-sub text-center">Cobertura completa en Seguridad, Higiene y Medio Ambiente con foco en cumplimiento, gestión y cultura preventiva.</p>
+    <div class="container max-960">
+      <h2 class="section-title text-center">Soluciones ejecutivas</h2>
+      <p class="section-sub text-center">
+        Cobertura completa en Seguridad, Higiene y Medio Ambiente con foco en
+        cumplimiento, gestión y cultura preventiva.
+      </p>
 
-  <div class="row g-4">
-    <div class="col-md-6">
-      <div class="card-pro p-4 h-100">
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <div class="icon-wrap"><img src="img/icon-compliance.svg" alt="" width="28" height="28"/></div>
-          <h3 class="h5 m-0">Cumplimiento base</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-pro p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-wrap">
+                <img
+                  src="img/icon-compliance.svg"
+                  alt=""
+                  width="28"
+                  height="28"
+                />
+              </div>
+              <h3 class="h5 m-0">Cumplimiento base</h3>
+            </div>
+            <p class="m-0">
+              Relevamiento inicial, matriz legal, plan anual, cronograma de
+              capacitaciones y soporte ante inspecciones.
+            </p>
+          </div>
         </div>
-        <p class="m-0">Relevamiento inicial, matriz legal, plan anual, cronograma de capacitaciones y soporte ante inspecciones.</p>
+
+        <div class="col-md-6">
+          <div class="card-pro p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-wrap">
+                <img src="img/icon-audit.svg" alt="" width="28" height="28" />
+              </div>
+              <h3 class="h5 m-0">Gestión integral</h3>
+            </div>
+            <p class="m-0">
+              Asesor externo, auditorías programadas, indicadores y reportes
+              ejecutivos mensuales para dirección.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card-pro p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-wrap">
+                <img
+                  src="img/icon-training.svg"
+                  alt=""
+                  width="28"
+                  height="28"
+                />
+              </div>
+              <h3 class="h5 m-0">Capacitación & cultura</h3>
+            </div>
+            <p class="m-0">
+              EPP, ergonomía, RCP, incendios y evacuación (presencial/virtual).
+              Registros y certificados para auditorías.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card-pro p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icon-wrap">
+                <img
+                  src="img/icon-environment.svg"
+                  alt=""
+                  width="28"
+                  height="28"
+                />
+              </div>
+              <h3 class="h5 m-0">Ambiente & sostenibilidad</h3>
+            </div>
+            <p class="m-0">
+              Gestión de residuos, RAEE, mediciones y programas de reducción de
+              impacto. Reportes para clientes y auditorías.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-6">
-      <div class="card-pro p-4 h-100">
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <div class="icon-wrap"><img src="img/icon-audit.svg" alt="" width="28" height="28"/></div>
-          <h3 class="h5 m-0">Gestión integral</h3>
-        </div>
-        <p class="m-0">Asesor externo, auditorías programadas, indicadores y reportes ejecutivos mensuales para dirección.</p>
-      </div>
+  <!-- CALIDAD QUE INTEGRA (bloque intermedio) -->
+  <section id="calidad" class="section section--alt">
+    <div class="container max-960 text-center">
+      <h2 class="section-title">Calidad que Integra</h2>
+      <p class="section-sub">
+        En Integra, la Calidad es el enfoque que atraviesa la Seguridad, la
+        Higiene y el Medio Ambiente. Inspirada en principios de gestión de
+        calidad, nos impulsa a planificar mejor, medir resultados y mejorar cada
+        proceso con transparencia y eficiencia.
+      </p>
     </div>
-
-    <div class="col-md-6">
-      <div class="card-pro p-4 h-100">
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <div class="icon-wrap"><img src="img/icon-training.svg" alt="" width="28" height="28"/></div>
-          <h3 class="h5 m-0">Capacitación & cultura</h3>
-        </div>
-        <p class="m-0">EPP, ergonomía, RCP, incendios y evacuación (presencial/virtual). Registros y certificados para auditorías.</p>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card-pro p-4 h-100">
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <div class="icon-wrap"><img src="img/icon-environment.svg" alt="" width="28" height="28"/></div>
-          <h3 class="h5 m-0">Ambiente & sostenibilidad</h3>
-        </div>
-        <p class="m-0">Gestión de residuos, RAEE, mediciones y programas de reducción de impacto. Reportes para clientes y auditorías.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+  </section>
 
   <!-- METODOLOGÍA -->
-<section id="metodologia" class="section section--muted">
-  <div class="container max-960 text-center">
-    <h2 class="section-title">Cómo trabajamos</h2>
-    <p class="section-sub">Un proceso simple, medible y diseñado para acompañarte paso a paso.</p>
+  <section id="metodologia" class="section section--muted">
+    <div class="container max-960 text-center">
+      <h2 class="section-title">Cómo trabajamos</h2>
+      <p class="section-sub">
+        Un proceso simple, medible y diseñado para acompañarte paso a paso.
+      </p>
+      <p class="text-muted m-0">
+        Cada etapa se ejecuta bajo un enfoque de calidad, asegurando
+        trazabilidad, control y mejora continua.
+      </p>
 
-    <div class="steps">
-      <!-- 1 -->
-      <div class="step">
-        <span class="step-icon" aria-hidden="true">
-          <!-- lupa/diagnóstico -->
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </span>
-        <h3>Diagnóstico</h3>
-        <p>Evaluación inicial gratuita para entender tus necesidades.</p>
-      </div>
+      <div class="steps">
+        <!-- 1 -->
+        <div class="step">
+          <span class="step-icon" aria-hidden="true">
+            <!-- lupa/diagnóstico -->
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <h3>Diagnóstico</h3>
+          <p>Evaluación inicial gratuita para entender tus necesidades.</p>
+        </div>
 
-      <!-- 2 -->
-      <div class="step">
-        <span class="step-icon" aria-hidden="true">
-          <!-- plan/clipboard -->
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="3" width="16" height="18" rx="2"></rect>
-            <path d="M9 7h6M8 11h8M8 15h5"></path>
-          </svg>
-        </span>
-        <h3>Plan de acción</h3>
-        <p>Diseñamos un plan técnico y operativo de 90 días.</p>
-      </div>
+        <!-- 2 -->
+        <div class="step">
+          <span class="step-icon" aria-hidden="true">
+            <!-- plan/clipboard -->
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+              <path d="M9 7h6M8 11h8M8 15h5"></path>
+            </svg>
+          </span>
+          <h3>Plan de acción</h3>
+          <p>Diseñamos un plan técnico y operativo de 90 días.</p>
+        </div>
 
-      <!-- 3 -->
-      <div class="step">
-        <span class="step-icon" aria-hidden="true">
-          <!-- engranaje/ejecución -->
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.07a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06A2 2 0 1 1 4.2 17l.06-.06A1.65 1.65 0 0 0 4.59 15 1.65 1.65 0 0 0 3.08 14H3a2 2 0 1 1 0-4h.07a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06A2 2 0 1 1 7.02 4.2l.06.06A1.65 1.65 0 0 0 8.9 4.59 1.65 1.65 0 0 0 10 3.08V3a2 2 0 1 1 4 0v.07a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06A2 2 0 1 1 19.8 7l-.06.06A1.65 1.65 0 0 0 19.41 9c0 .55.21 1.08.59 1.49.38.41.9.66 1.45.66H21a2 2 0 1 1 0 4h-.07a1.65 1.65 0 0 0-1.51 1Z"></path>
-          </svg>
-        </span>
-        <h3>Ejecución</h3>
-        <p>Implementamos acciones y realizamos seguimiento técnico.</p>
-      </div>
+        <!-- 3 -->
+        <div class="step">
+          <span class="step-icon" aria-hidden="true">
+            <!-- engranaje/ejecución -->
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.07a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06A2 2 0 1 1 4.2 17l.06-.06A1.65 1.65 0 0 0 4.59 15 1.65 1.65 0 0 0 3.08 14H3a2 2 0 1 1 0-4h.07a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06A2 2 0 1 1 7.02 4.2l.06.06A1.65 1.65 0 0 0 8.9 4.59 1.65 1.65 0 0 0 10 3.08V3a2 2 0 1 1 4 0v.07a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06A2 2 0 1 1 19.8 7l-.06.06A1.65 1.65 0 0 0 19.41 9c0 .55.21 1.08.59 1.49.38.41.9.66 1.45.66H21a2 2 0 1 1 0 4h-.07a1.65 1.65 0 0 0-1.51 1Z"
+              ></path>
+            </svg>
+          </span>
+          <h3>Ejecución</h3>
+          <p>Implementamos acciones y realizamos seguimiento técnico.</p>
+        </div>
 
-      <!-- 4 -->
-      <div class="step">
-        <span class="step-icon" aria-hidden="true">
-          <!-- birrete/capacitación -->
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
-            <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"></path>
-          </svg>
-        </span>
-        <h3>Capacitación</h3>
-        <p>Formamos a tus equipos para garantizar resultados sostenibles.</p>
-      </div>
+        <!-- 4 -->
+        <div class="step">
+          <span class="step-icon" aria-hidden="true">
+            <!-- birrete/capacitación -->
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
+              <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"></path>
+            </svg>
+          </span>
+          <h3>Capacitación</h3>
+          <p>Formamos a tus equipos para garantizar resultados sostenibles.</p>
+        </div>
 
-      <!-- 5 -->
-      <div class="step">
-        <span class="step-icon" aria-hidden="true">
-          <!-- loop/mejora -->
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="1 4 1 10 7 10"></polyline>
-            <polyline points="23 20 23 14 17 14"></polyline>
-            <path d="M20.49 9A9 9 0 0 0 5 5l-4 4M3.51 15A9 9 0 0 0 19 19l4-4"></path>
-          </svg>
-        </span>
-        <h3>Mejora continua</h3>
-        <p>Medimos avances y optimizamos los procesos periódicamente.</p>
+        <!-- 5 -->
+        <div class="step">
+          <span class="step-icon" aria-hidden="true">
+            <!-- loop/mejora -->
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <polyline points="23 20 23 14 17 14"></polyline>
+              <path d="M20.49 9A9 9 0 0 0 5 5l-4 4M3.51 15A9 9 0 0 0 19 19l4-4"
+              ></path>
+            </svg>
+          </span>
+          <h3>Mejora continua</h3>
+          <p>Medimos avances y optimizamos los procesos periódicamente.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECTORES -->
-<section id="sectores" class="section-full section--alt">
-  <div class="container max-960">
-    <h2 class="section-title text-center">Sectores que acompañamos</h2>
-    <p class="section-sub text-center">Adaptamos el plan a tu operación: procesos, personas y cumplimiento.</p>
+  <!-- SECTORES -->
+  <section id="sectores" class="section-full section--alt">
+    <div class="container max-960">
+      <h2 class="section-title text-center">Sectores que acompañamos</h2>
+      <p class="section-sub text-center">
+        Adaptamos el plan a tu operación: procesos, personas y cumplimiento.
+      </p>
 
-    <div class="stack">
-      <div class="card-horizontal reveal">
-        <img src="img/sector-industry.svg" alt="Industria">
-        <div>
-          <h3 class="h5 mb-1">Industria</h3>
-          <p class="text-muted m-0">Menos incidentes, más productividad. Programas de orden, señalización y formación operativa.</p>
+      <div class="stack">
+        <div class="card-horizontal reveal">
+          <img src="img/sector-industry.svg" alt="Industria" />
+          <div>
+            <h3 class="h5 mb-1">Industria</h3>
+            <p class="text-muted m-0">
+              Menos incidentes, más productividad. Programas de orden,
+              señalización y formación operativa.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="card-horizontal reveal">
-        <img src="img/sector-logistics.svg" alt="Logística y Depósitos">
-        <div>
-          <h3 class="h5 mb-1">Logística y Depósitos</h3>
-          <p class="text-muted m-0">Flujos claros, ergonomía, prevención de incendios y simulacros efectivos.</p>
+        <div class="card-horizontal reveal">
+          <img src="img/sector-logistics.svg" alt="Logística y Depósitos" />
+          <div>
+            <h3 class="h5 mb-1">Logística y Depósitos</h3>
+            <p class="text-muted m-0">
+              Flujos claros, ergonomía, prevención de incendios y simulacros
+              efectivos.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="card-horizontal reveal">
-        <img src="img/sector-commerce.svg" alt="Comercio y Servicios">
-        <div>
-          <h3 class="h5 mb-1">Comercio y Servicios</h3>
-          <p class="text-muted m-0">Ambientes seguros y experiencia del cliente consistente con normativa al día.</p>
+        <div class="card-horizontal reveal">
+          <img src="img/sector-commerce.svg" alt="Comercio y Servicios" />
+          <div>
+            <h3 class="h5 mb-1">Comercio y Servicios</h3>
+            <p class="text-muted m-0">
+              Ambientes seguros y experiencia del cliente consistente con
+              normativa al día.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="card-horizontal reveal">
-        <img src="img/sector-education.svg" alt="Educación Privada">
-        <div>
-          <h3 class="h5 mb-1">Educación Privada</h3>
-          <p class="text-muted m-0">Capacitaciones docentes, plan de evacuación y cultura preventiva sostenida.</p>
+        <div class="card-horizontal reveal">
+          <img src="img/sector-education.svg" alt="Educación Privada" />
+          <div>
+            <h3 class="h5 mb-1">Educación Privada</h3>
+            <p class="text-muted m-0">
+              Capacitaciones docentes, plan de evacuación y cultura preventiva
+              sostenida.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- NOSOTROS -->
- <section id="nosotros" class="section section--alt">
-  <div class="container max-960">
-    <header class="text-center mb-5">
-      <h2 class="section-title">Quiénes somos</h2>
-      <p class="section-sub">Consultora independiente con enfoque técnico y cercano.</p>
-    </header>
+  <section id="nosotros" class="section section--alt">
+    <div class="container max-960">
+      <header class="text-center mb-5">
+        <h2 class="section-title">Quiénes somos</h2>
+        <p class="section-sub">
+          Consultora independiente con enfoque técnico y cercano.
+        </p>
+      </header>
 
-    <!-- Misión / Visión -->
-    <div class="row g-4 mb-4">
-      <div class="col-12 col-md-6">
-        <article class="about-card reveal">
-          <div class="icon-wrap" aria-hidden="true">
-            <!-- target icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-6a1 1 0 0 1 1 1v1.055A8.004 8.004 0 0 1 20.945 11H22a1 1 0 1 1 0 2h-1.055A8.004 8.004 0 0 1 13 20.945V22a1 1 0 1 1-2 0v-1.055A8.004 8.004 0 0 1 3.055 13H2a1 1 0 1 1 0-2h1.055A8.004 8.004 0 0 1 11 3.055V2a1 1 0 0 1 1-1Z"/></svg>
-          </div>
-          <h3 class="about-title">Misión</h3>
-          <p class="m-0">Ayudar a las PyMEs e instituciones del AMBA a operar seguras, en regla y con conciencia ambiental.</p>
-        </article>
-      </div>
-      <div class="col-12 col-md-6">
-        <article class="about-card reveal">
-          <div class="icon-wrap" aria-hidden="true">
-            <!-- compass icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm3.6 6.4-1.8 5.4-5.4 1.8 1.8-5.4 5.4-1.8Z"/></svg>
-          </div>
-          <h3 class="about-title">Visión</h3>
-          <p class="m-0">Ser la consultora de referencia por simplicidad, cercanía y resultados medibles.</p>
-        </article>
-      </div>
-    </div>
-
-    <!-- Valores -->
-    <div class="row g-4 align-items-start mb-4">
-      <div class="col-12 col-lg-6">
-  <h3 class="about-kicker">Valores</h3>
-  <ul class="about-values compact">
-    <li>Integridad</li>
-    <li>Responsabilidad</li>
-    <li>Orientación al cliente</li>
-    <li>Colaboración</li>
-    <li>Calidad</li>
-    <li>Adaptabilidad</li>
-    <li>Sostenibilidad</li>
-    <li>Impacto social</li>
-  </ul>
-</div>
-      <!-- Mini métricas / confianza -->
-      <div class="col-12 col-lg-6">
-        <div class="about-metrics">
-          <div class="metric">
-            <span class="metric-num">+50</span>
-            <span class="metric-label">capacitaciones</span>
-          </div>
-          <div class="metric">
-            <span class="metric-num">+12</span>
-            <span class="metric-label">rubros atendidos</span>
-          </div>
-          <div class="metric">
-            <span class="metric-num">100%</span>
-            <span class="metric-label">planes en regla</span>
-          </div>
+      <!-- Enfoque de Calidad (intro conceptual) -->
+      <div class="about-card reveal mb-4">
+        <div class="icon-wrap" aria-hidden="true">
+          <!-- espiral/mejora continua -->
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+  <circle cx="12" cy="12" r="3"></circle>
+</svg>
         </div>
-        <p class="text-muted mt-3">Indicadores representativos. Actualizamos métricas en reportes trimestrales.</p>
+        <h3 class="about-title">Calidad como puente</h3>
+        <p class="m-0">
+          En Integra, la Calidad actúa como el puente entre la Seguridad, la
+          Higiene y el Medio Ambiente. Es una forma de pensar y trabajar basada
+          en principios de gestión de calidad, orientada a prevenir, mejorar y
+          sostener resultados en el tiempo.
+        </p>
+      </div>
+
+      <!-- Misión / Visión -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-md-6">
+          <article class="about-card reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <!-- target icon -->
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="currentColor"
+                ><path
+                  d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-6a1 1 0 0 1 1 1v1.055A8.004 8.004 0 0 1 20.945 11H22a1 1 0 1 1 0 2h-1.055A8.004 8.004 0 0 1 13 20.945V22a1 1 0 1 1-2 0v-1.055A8.004 8.004 0 0 1 3.055 13H2a1 1 0 1 1 0-2h1.055A8.004 8.004 0 0 1 11 3.055V2a1 1 0 0 1 1-1Z"
+                ></path></svg
+              >
+            </div>
+            <h3 class="about-title">Misión</h3>
+            <p class="m-0">
+              Ayudar a las PyMEs e instituciones del AMBA a operar seguras, en
+              regla y con conciencia ambiental.
+            </p>
+          </article>
+        </div>
+        <div class="col-12 col-md-6">
+          <article class="about-card reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <!-- compass icon -->
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="currentColor"
+                ><path
+                  d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm3.6 6.4-1.8 5.4-5.4 1.8 1.8-5.4 5.4-1.8Z"
+                ></path></svg
+              >
+            </div>
+            <h3 class="about-title">Visión</h3>
+            <p class="m-0">
+              Ser la consultora de referencia por simplicidad, cercanía y
+              resultados medibles.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-12 col-lg-6">
+          <h3 class="about-kicker">Valores</h3>
+          <ul class="about-values compact">
+            <li>Integridad</li>
+            <li>Responsabilidad</li>
+            <li>Orientación al cliente</li>
+            <li>Colaboración</li>
+            <li>Calidad integrada</li>
+            <li>Adaptabilidad</li>
+            <li>Sostenibilidad</li>
+            <li>Impacto social</li>
+          </ul>
+        </div>
+        <!-- Mini métricas / confianza -->
+        <div class="col-12 col-lg-6">
+          <div class="about-metrics">
+            <div class="metric">
+              <span class="metric-num">+50</span>
+              <span class="metric-label">capacitaciones</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num">+12</span>
+              <span class="metric-label">rubros atendidos</span>
+            </div>
+            <div class="metric">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">planes en regla</span>
+            </div>
+          </div>
+          <p class="text-muted mt-3">
+            Indicadores representativos. Actualizamos métricas en reportes
+            trimestrales.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- RESULTADOS -->
-  <section id="resultados" class="section section-muted">
-  <div class="container">
-    <h2 class="mb-3 text-center">Resultados</h2>
-    <ul class="list-unstyled text-center m-0">
-      <li>PyME metalúrgica: −35% incidentes en 6 meses.</li>
-      <li>Colegio privado: plan de evacuación + capacitaciones en 30 días.</li>
-      <li>Depósito: señalización y orden integral en 45 días.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CLIENTES -->
-<section id="clientes" class="section section--alt text-center">
-  <div class="container max-960">
-    <h2 class="mb-4">Confían en nosotros</h2>
-    <p class="lead mb-5">Empresas e instituciones que eligen a INTEGRA para gestionar su seguridad, higiene y ambiente.</p>
-
-    <!-- Nueva grilla -->
-    <div class="clients-grid">
-      <img src="img/client-01.png" alt="YPF Gas"        class="client-logo">
-      <img src="img/client-02.png" alt="Y-TEC"          class="client-logo">
-      <img src="img/client-03.png" alt="YPF Luz"        class="client-logo">
-      <img src="img/client-04.png" alt="SEE"            class="client-logo">
-      <img src="img/client-05.png" alt="Emergencias"    class="client-logo">
-      <img src="img/client-06.png" alt="RODO"           class="client-logo">
-      <img src="img/client-07.png" alt="SportClub"      class="client-logo">
-      <img src="img/client-08.png" alt="Farmacia Once"  class="client-logo">
-      <img src="img/client-09.png" alt="MEGA"           class="client-logo">
-      <img src="img/client-10.png" alt="Goody Group"    class="client-logo">
-      <img src="img/client-11.png" alt="AMI"            class="client-logo">
+  <section id="resultados" class="section section--muted">
+    <div class="container">
+      <h2 class="mb-3 text-center">Resultados</h2>
+      <ul class="list-unstyled text-center m-0">
+        <li>PyME metalúrgica: −35% incidentes en 6 meses.</li>
+        <li>
+          Colegio privado: plan de evacuación + capacitaciones en 30 días.
+        </li>
+        <li>Depósito: señalización y orden integral en 45 días.</li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes" class="section section--alt text-center">
+    <div class="container max-960">
+      <h2 class="mb-4">Confían en nosotros</h2>
+      <p class="lead mb-5">
+        Empresas e instituciones que eligen a INTEGRA para gestionar su
+        seguridad, higiene y ambiente.
+      </p>
+
+      <!-- Nueva grilla -->
+      <div class="clients-grid">
+        <img src="img/client-01.png" alt="YPF Gas" class="client-logo" />
+        <img src="img/client-02.png" alt="Y-TEC" class="client-logo" />
+        <img src="img/client-03.png" alt="YPF Luz" class="client-logo" />
+        <img src="img/client-04.png" alt="SEE" class="client-logo" />
+        <img src="img/client-05.png" alt="Emergencias" class="client-logo" />
+        <img src="img/client-06.png" alt="RODO" class="client-logo" />
+        <img src="img/client-07.png" alt="SportClub" class="client-logo" />
+        <img src="img/client-08.png" alt="Farmacia Once" class="client-logo" />
+        <img src="img/client-09.png" alt="MEGA" class="client-logo" />
+        <img src="img/client-10.png" alt="Goody Group" class="client-logo" />
+        <img src="img/client-11.png" alt="AMI" class="client-logo" />
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="section section--alt">
-  <div class="container max-720">
-    <h2 class="text-center">Hablemos sobre tu empresa</h2>
-    <form class="row g-3 mx-auto" style="max-width:720px" name="contact-form" method="post" action="/contacto.php">
-      <div class="col-md-6"><label class="form-label" for="name">Nombre</label><input class="form-control" id="name" name="name" required /></div>
-      <div class="col-md-6"><label class="form-label" for="email">Email</label><input type="email" class="form-control" id="email" name="email" required /></div>
-      <div class="col-12"><label class="form-label" for="company">Empresa</label><input class="form-control" id="company" name="company" /></div>
-      <div class="col-12"><label class="form-label" for="message">Mensaje</label><textarea class="form-control" id="message" name="message" rows="5" required></textarea></div>
-      <div class="col-12 text-center"><button class="btn btn-primary btn-lg" type="submit">Enviar</button></div>
-    </form>
-    <div class="mt-4 text-center">
-      <p class="mb-1"><strong>Email:</strong> contacto@integra.com.ar</p>
-      <p class="mb-1"><strong>WhatsApp:</strong> +54 11 6741 6241</p>
-      <p class="mb-1"><strong>AMBA:</strong> CABA + GBA · Lun a Vie 9–18 h</p>
+    <div class="container max-720">
+      <h2 class="text-center">Hablemos sobre tu empresa</h2>
+      <form
+        class="row g-3 mx-auto"
+        style="max-width:720px"
+        name="contact-form"
+        method="post"
+        action="/contacto.php"
+      >
+        <div class="col-md-6">
+          <label class="form-label" for="name">Nombre</label><input
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">Email</label><input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="company">Empresa</label><input
+            class="form-control"
+            id="company"
+            name="company"
+          />
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="message">Mensaje</label><textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+        </div>
+      </form>
+      <div class="mt-4 text-center">
+        <p class="mb-1"><strong>Email:</strong> contacto@integra.com.ar</p>
+        <p class="mb-1"><strong>WhatsApp:</strong> +54 11 6741 6241</p>
+        <p class="mb-1"><strong>AMBA:</strong> CABA + GBA · Lun a Vie 9–18 h</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <Footer />
 </Layout>
